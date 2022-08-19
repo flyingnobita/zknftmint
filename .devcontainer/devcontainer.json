@@ -34,14 +34,19 @@
 				"mutantdino.resourcemonitor",
 				"rust-lang.rust-analyzer",
 				"tamasfe.even-better-toml",
-				"serayuzgur.crates"
+				"serayuzgur.crates",
+				"esbenp.prettier-vscode",
+				"codezombiech.gitignore",
+				"eamodio.gitlens",
+				"tintinweb.solidity-visual-auditor",
+				"JuanBlanco.solidity"
 			]
 		}
 	},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "cd zknftmint; npm i; npm run bootstrap",
+	"postCreateCommand": "npm install; npm run bootstrap",
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode",
 	"features": {

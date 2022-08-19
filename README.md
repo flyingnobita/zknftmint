@@ -65,12 +65,23 @@ npm run build
 To compile the circuits, generate its zkey file, and export its verification
 key for off-chain proof verification:
 
+Prerequisite:
+1) Install circom (if using vscode, already done in vscode DevContainer in Dockerfile)
+```
+git clone https://github.com/iden3/circom.git
+cd circom
+cargo build --release
+cargo install --path circom
+```
+
+2) Update circom path in ./zkeys.config.yml
+
 ```
 cd circuits
 npx zkey-manager compile -c ./zkeys.config.yml
 npx zkey-manager downloadPtau -c ./zkeys.config.yml
 npx zkey-manager genZkeys -c ./zkeys.config.yml
-npx snarkjs zkev ./NftMint__prod.0.zkey ./zkeys/verification_key.json
+npx snarkjs zkev ./zkeys/NftMint__prod.0.zkey ./zkeys/verification_key.json
 node build/exportVerifier.js ./zkeys/NftMint__prod.0.zkey ../contracts/contracts/verifier.sol
 ```
 

@@ -45,9 +45,9 @@ const calculateProof = async (
         proof.pi_c[1],
     ];
 
-      const proofAsStr = JSON.stringify(
-            proofForTx.map((x) => BigInt(x).toString(10)),
-      ).split('\n').join().replaceAll('"', '')
+    const proofAsStr = JSON.stringify(
+        proofForTx.map((x) => BigInt(x).toString(10)),
+    ).split('\n').join().replaceAll('"', '')
 
     const proofCompnent = document.getElementById('proof')
     proofCompnent.innerHTML = proofAsStr
