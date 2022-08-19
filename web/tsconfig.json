@@ -3,9 +3,17 @@
         "outDir": "./dist/",
         "checkJs": false,
         "allowJs": true,
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "lib": [
+            "DOM",
+            "ES2021"
+        ],
     },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules/**", "tests/**"]
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules/**",
+        "tests/**"
+    ]
 }
-

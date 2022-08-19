@@ -69,8 +69,8 @@ const main = async () => {
     const bGenProof = document.getElementById("bGenProof")
 
     bGenProof.addEventListener("click", () => {
-        const secret = document.getElementById("secret")
-        const address = document.getElementById("address")
+        const secret = document.getElementById("secret") as HTMLInputElement
+        const address = document.getElementById("address") as HTMLInputElement
         calculateProof(
             address.value,
             secret.value
